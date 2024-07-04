@@ -109,22 +109,33 @@ class  Accuracy_of_features_and_price_on_product_detail_page(PageBase):
     def Click_on_a_product_from_product_list(self):
          self.wait_element_visibility(URUN_LOC).click()
          sleep(2)
-         
+        
     #diğer sayfaya geç
     def return_first_tab(self):
         self.driver.switch_to.window(self.driver.window_handles[0])
+    
+    def item_description_assert(self):
+        # Öğenin açıklamasını bul ve döndür
+        item_desc = self.wait_element_visibility(URUN_LOC)
+        return item_desc.text
 
-    def page_down_slide (self):
-        self.driver.execute_script("scrollBy(0,500)")
 
-     #"Tüm özellikleri" butonuna tıklayın.
-    def Click_all_features_button(self):
-        self.wait_element_visibility(TUM_OZELLIKLER).click()
 
-    def scroll_up_page (self):
-        self.driver.execute_script("window.scrollTo(0,1798.4000244140625)")
 
-    def take_a_screen_photoo(self):
-        ekrangoruntusu_path = FOTO_URUN_OZELLIKLERI
-        self.driver.save_screenshot(ekrangoruntusu_path)
+
+
+
+
+    
+
+
+    
+
+
+  
+
+
+    
+
+
     
