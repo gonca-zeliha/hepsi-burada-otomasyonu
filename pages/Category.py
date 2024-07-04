@@ -109,7 +109,11 @@ class  Accuracy_of_features_and_price_on_product_detail_page(PageBase):
     def Click_on_a_product_from_product_list(self):
          self.wait_element_visibility(URUN_LOC).click()
          sleep(2)
-    
+         
+    #diğer sayfaya geç
+    def return_first_tab(self):
+        self.driver.switch_to.window(self.driver.window_handles[0])
+
     def page_down_slide (self):
         self.driver.execute_script("scrollBy(0,500)")
 
