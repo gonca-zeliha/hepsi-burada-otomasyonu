@@ -14,14 +14,14 @@ class category_and_sub_category_selection(PageBase):
         self.driver = driver
     
     def accept_cookies(self):
-        tıkla= self.wait_element_visibility(ACCEPT_COOKIES_LOC)
-        tıkla.click()
+        click= self.wait_element_visibility(ACCEPT_COOKIES_LOC)
+        click.click()
 
 #Anasayfadaki_sol_üst_menüde_elektronik_kategorisine_tıklayın
     def Click_on_the_electronics_category_in_the_top_left_menu_on_the_homepage (self):
        
-        tikla= self.wait_element_visibility(ELECTRONIC_LOC)
-        tikla.click()
+        click= self.wait_element_visibility(ELECTRONIC_LOC)
+        click.click()
 
     #Bilgisayar/Tablet kategorisine tıklayın.
 
@@ -76,8 +76,8 @@ class  Product_search_and_filtering_of_results(PageBase):
         self.driver = driver
     
     def accept_cookies(self):
-        tıkla= self.wait_element_visibility(ACCEPT_COOKIES_LOC)
-        tıkla.click()
+        click= self.wait_element_visibility(ACCEPT_COOKIES_LOC)
+        click.click()
     
     def Click_onthe_Search_button(self):
         self.wait_element_visibility(SEARCH_BUTTON_LOC).click()
